@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seni Teater HOTS Challenge — Kelas 2 SD</title>
+<meta name="description" content="30 soal Seni Teater (SBdP) HOTS Level Nasional untuk kelas 2 SD">
+<style>
+  :root{
+    --primary:#6d28d9; --primary-dark:#5b21b6; --accent:#f59e0b;
+    --ok:#16a34a; --bad:#dc2626; --card:#ffffff; --ink:#1f2937; --muted:#6b7280;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Comic Sans MS','Segoe UI',system-ui,sans-serif;
+    color:var(--ink); min-height:100vh; padding:16px;
+    background:linear-gradient(135deg,#ede9fe,#dbeafe 50%,#fce7f3);
+  }
+  .wrap{max-width:760px;margin:0 auto}
+  header{text-align:center;margin-bottom:16px}
+  header h1{font-size:clamp(1.4rem,5vw,2.1rem);color:var(--primary)}
+  header p{color:var(--muted);font-size:.95rem}
+  .chip{display:inline-block;background:var(--accent);color:#7c2d12;font-weight:bold;
+    border-radius:999px;padding:4px 14px;font-size:.85rem;margin-top:8px}
+  .card{background:var(--card);border-radius:20px;padding:22px;
+    box-shadow:0 8px 24px rgba(76,29,149,.12);margin-bottom:14px}
+  .btn{display:block;width:100%;border:none;cursor:pointer;font-family:inherit;
+    font-size:1.05rem;border-radius:14px;padding:15px 18px;margin-top:10px;
+    background:var(--primary);color:#fff;font-weight:bold;transition:transform .1s}
+  .btn:active{transform:scale(.98)}
+  .btn:disabled{background:#c4b5fd;cursor:not-allowed}
+  .btn.secondary{background:#ede9fe;color:var(--primary)}
+  ul.rules{margin:12px 0 4px 22px;line-height:1.9;font-size:1rem}
+  label.small{display:block;margin-top:14px;font-weight:bold;color:var(--primary)}
+  input.name{width:100%;margin-top:6px;padding:13px 14px;border:2px solid #ddd6fe;
+    border-radius:12px;font-family:inherit;font-size:1rem}
+  .bar{height:12px;background:#ede9fe;border-radius:999px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));
+    transition:width .3s;border-radius:999px}
+  .meta{display:flex;justify-content:space-between;align-items:center;
+    font-size:.9rem;color:var(--muted);margin-bottom:8px;gap:8px}
+  .lv{background:#ede9fe;color:var(--primary);border-radius:999px;padding:3px 10px;font-weight:bold}
+  .qtext{font-size:1.25rem;line-height:1.55;margin:14px 0 6px;font-weight:bold;white-space:pre-line}
+  .qsub{background:#f8fafc;border:2px dashed #c4b5fd;border-radius:12px;
+    padding:12px;margin-top:10px;font-size:1rem;line-height:1.7;white-space:pre-line}
+  .vis{text-align:center;font-size:2.4rem;letter-spacing:.3em;margin:8px 0}
+  .opt{display:block;width:100%;text-align:left;background:#f5f3ff;border:2px solid #ddd6fe;
+    border-radius:14px;padding:14px 16px;margin-top:10px;font-family:inherit;font-size:1.05rem;
+    cursor:pointer;line-height:1.4;transition:background .15s}
+  .opt:hover{background:#ede9fe}
+  .opt .k{display:inline-block;width:26px;font-weight:bold;color:var(--primary)}
+  .opt.sel{background:var(--primary);color:#fff;border-color:var(--primary-dark)}
+  .opt.sel .k{color:#fde68a}
+  .scorebox{text-align:center}
+  .circle{width:130px;height:130px;border-radius:50%;margin:10px auto;
+    display:flex;flex-direction:column;justify-content:center;
+    background:conic-gradient(var(--ok) calc(var(--p)*1%),#ede9fe 0)}
+  .circle .in{background:#fff;width:104px;height:104px;border-radius:50%;margin:13px auto;
+    display:flex;flex-direction:column;justify-content:center}
+  .circle b{font-size:2rem;color:var(--primary)}
+  .circle span{font-size:.8rem;color:var(--muted)}
+  .badge{font-size:1.3rem;font-weight:bold;color:var(--accent);margin-top:6px}
+  .rev{border-top:2px solid #f3f4f6;padding:14px 0;font-size:.98rem}
+  .rev .st{font-weight:bold;border-radius:8px;padding:2px 8px;font-size:.85rem}
+  .st.good{background:#dcfce7;color:var(--ok)}
+  .st.wrong{background:#fee2e2;color:var(--bad)}
+  .rev .qq{margin:8px 0 4px;font-weight:bold}
+  .rev .ans{line-height:1.7}
+  .rev .exp{background:#fffbeb;border-left:4px solid var(--accent);
+    padding:8px 10px;margin-top:8px;border-radius:0 8px 8px 0;font-size:.92rem}
+  .hrow{display:flex;align-items:center;gap:8px;background:#f8fafc;border:2px solid #ede9fe;
+    border-radius:12px;padding:9px 13px;margin-top:8px;font-size:.98rem}
+  .hdate{margin-left:auto;color:var(--muted);font-size:.82rem}
+  .hide{display:none}
+  footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:18px}
+  @media print{
+    body{background:#fff;padding:0}.noprint{display:none!important}
+    .card{box-shadow:none;border:1px solid #ddd}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🎭 Seni Teater HOTS Challenge 🎭</h1>
+    <p>Seni Budaya / SBdP · 30 Soal · Tingkat Nasional</p>
+    <span class="chip">Kelas 2 SD · Level HOTS (C4–C6)</span>
+  </header>
+
+  <!-- MULAI -->
+  <section id="start" class="card">
+    <p style="line-height:1.8">
+      Halo, Bintang! 👋 Ini 30 soal Seni Teater berpikir tingkat tinggi (HOTS).
+      Baca teks dan petunjuk dengan cermat, lalu pilih jawaban terbaik.
+    </p>
+    <ul class="rules">
+      <li>30 soal pilihan ganda (A–D)</li>
+      <li>Satu jawaban terbaik tiap soal</li>
+      <li>Jawaban terkunci begitu kamu memilih</li>
+      <li>Di akhir, kamu dapat nilai + pembahasan tiap soal</li>
+    </ul>
+    <label class="small" for="nm">Namamu (opsional, tampil di hasil) ✏️</label>
+    <input class="name" id="nm" type="text" maxlength="30" placeholder="Contoh: Aisyah">
+    <button class="btn" id="go">🚀 Mulai Kerjakan!</button>
+    <div id="histbox" class="hide">
+      <h2 style="color:var(--primary);margin-top:20px;font-size:1.1rem">📜 Riwayat Skor</h2>
+      <div id="hist"></div>
+      <button class="btn secondary" id="clearHist" style="font-size:.9rem;padding:10px">🗑️ Hapus Riwayat</button>
+    </div>
+  </section>
+
+  <!-- SOAL -->
+  <section id="quiz" class="hide">
+    <div class="card">
+      <div class="meta">
+        <span id="cnt">Soal 1 / 30</span>
+        <span class="lv" id="lv">🔍 Analisis</span>
+      </div>
+      <div class="bar"><i id="fill" style="width:0%"></i></div>
+      <div class="vis" id="vis" aria-hidden="true"></div>
+      <div class="qtext" id="qtext" role="region" aria-live="polite"></div>
+      <div class="qsub hide" id="qsub"></div>
+      <div id="opts"></div>
+    </div>
+    <button class="btn" id="next" disabled>Soal Berikutnya ➜</button>
+    <button class="btn secondary noprint" id="quit">⏱️ Selesai &amp; Lihat Nilai</button>
+  </section>
+
+  <!-- HASIL -->
+  <section id="res" class="hide">
+    <div class="card scorebox">
+      <div id="who" style="font-weight:bold;font-size:1.1rem"></div>
+      <div class="circle" id="circ" style="--p:0">
+        <div class="in"><b id="sc">0</b><span>dari 30</span></div>
+      </div>
+      <div class="badge" id="bdg"></div>
+      <p id="msg" style="margin-top:8px;line-height:1.7"></p>
+      <p id="saved" class="hide" style="color:var(--ok);font-weight:bold;margin-top:6px">✅ Skor tersimpan di riwayat (perangkat ini)</p>
+      <button class="btn" id="again">🔁 Kerjakan Ulang</button>
+      <button class="btn secondary noprint" id="printBtn">🖨️ Cetak Pembahasan</button>
+    </div>
+    <div class="card" id="revbox"></div>
+  </section>
+
+  <footer>Dibuat untuk pembelajaran Seni Teater / SBdP SD · HOTS: C4 Analisis · C5 Evaluasi · C6 Kreasi</footer>
+</div>
+
+<script>
+// ponytail: tanpa timer/shuffle/simpan-otomatis — tambah localStorage kalau perlu lanjut nanti
+const DATA=[{"lv": "C4","vis": "🔊","q": "Dalam adegan, Sari berteriak: \"Tolong! Ada ular di dapur!\" Ibu Sari segera lari membawa sapu. Mengapa ibu Sari lari membawa sapu?","o": ["Karena ibu marah pada Sari.","Karena ibu mendengar ada ular di dapur.","Karena ibu ingin membersihkan kamar.","Karena ibu ingin mengejar Sari."],"a": 1,"e": "Hubungan sebab-akibat: teriakan 'ada ular' terdengar lebih dulu, lalu ibu lari membawa sapu untuk mengusir ular."},{"lv": "C4","vis": "🎭","q": "Pada pertunjukan, Andi hanya muncul sekali di panggung dan tidak berbicara sama sekali. Peran Andi disebut…","o": ["tokoh utama","figuran","pencerita","sutradara"],"a": 1,"e": "Figuran adalah tokoh tambahan tanpa dialog, hanya mengisi dan mendukung suasana cerita."},{"lv": "C4","vis": "💥","q": "Bima ingin pergi bermain, tetapi ibu menyuruhnya mengaji. Masalah yang dialami Bima disebut…","o": ["latar","konflik","dialog","properti"],"a": 1,"e": "Konflik adalah masalah atau pertentangan yang dialami tokoh — keinginan Bima bertentangan dengan perintah ibunya."},{"lv": "C4","vis": "🌧️","q": "Suara hujan dan guruh diputar saat pemain berkata, \"Gelap sekali, ya.\" Apa gunanya suara itu?","o": ["Supaya pemain lupa dialog.","Supaya penonton merasa suasana cerita seperti nyata.","Supaya pertunjukan lebih cepat selesai.","Supaya lampu panggung mati."],"a": 1,"e": "Tata suara/efek suara dipakai agar penonton percaya dan masuk ke suasana cerita."},{"lv": "C5","vis": "🎬","q": "Adegan menunjukkan tokoh sedang belajar di kamar. Properti yang PALING tepat ditampilkan adalah…","o": ["koper dan paspor","buku, meja, dan kursi","payung dan jas hujan","bakul dan sayur"],"a": 1,"e": "Properti harus mendukung kegiatan yang terjadi di adegan: belajar → buku, meja, dan kursi."},{"lv": "C5","vis": "🏖️","q": "Cerita berlatar di tepi pantai. Latar panggung yang paling tepat adalah…","o": ["gunung dan sawah","rak buku perpustakaan","pasir, laut, dan pohon kelapa","meja makan dan kompor"],"a": 2,"e": "Latar harus sesuai tempat kejadian dalam cerita: pantai = pasir, laut, dan pohon kelapa."},{"lv": "C4","vis": "👵","q": "Tokoh berperan sebagai nenek yang tinggal di kampung. Busana yang paling sesuai adalah…","o": ["jas dan dasi","kaos olahraga dan sepatu lari","kebaya dan kain, membawa tongkat","jas laboratorium"],"a": 2,"e": "Tata busana harus mendukung ciri tokoh: nenek → kebaya, kain, dan tongkat."},{"lv": "C4","vis": "😢","q": "Di akhir cerita, tokoh menangis sambil memeluk ibunya setelah lama berpisah. Perasaan tokoh saat itu kemungkinan…","o": ["senang karena bisa berkumpul kembali","marah pada ibunya","takut melihat ibunya","bosan menunggu"],"a": 0,"e": "Air mata saat memeluk setelah berpisah menunjukkan perasaan lega dan senang bisa berkumpul lagi."},{"lv": "C6","vis": "✍️","q": "Tokoh tidak sengaja menabrak temannya dan ingin minta maaf. Dialog yang PALING tepat diucapkan adalah…","o": ["Wah, kamu memang ceroboh!","Maaf, aku tidak sengaja. Apakah kamu apa-apa?","Sudahlah, diam kau!","Ayo kita lari cepat!"],"a": 1,"e": "Dialog permintaan maaf harus sopan dan menunjukkan perhatian pada teman (C6 — menyusun kalimat sesuai situasi)."},{"lv": "C5","vis": "🤝","q": "Seorang pemain lupa dialog di tengah panggung. Apa yang PALING tepat dilakukan?","o": ["Lari ke belakang panggung.","Menangis di depan penonton.","Tetap tenang dan melanjutkan dengan kata-kata sendiri.","Berteriak pada penonton."],"a": 2,"e": "Pemain yang baik tetap tenang lalu menutupi kelupaan dengan improvisasi agar pertunjukan tetap lancar."},{"lv": "C4","vis": "📜","q": "Urutan pertunjukan yang tepat adalah…\n(1) Pembina memberi sambutan\n(2) Pemain tampil di panggung\n(3) Pemain berpamitan kepada penonton\n(4) Tirai panggung ditutup","o": ["(1)-(2)-(4)-(3)","(1)-(2)-(3)-(4)","(2)-(1)-(3)-(4)","(1)-(3)-(2)-(4)"],"a": 1,"e": "Sambutan pembuka → pemain tampil → berpamitan → tirai ditutup sebagai tanda pertunjukan selesai."},{"lv": "C4","vis": "🎎","q": "Pertunjukan yang tokohnya berupa boneka dan digerakkan oleh orang di balik layar disebut…","o": ["drama boneka","ketoprak","ludruk","sandiwara radio"],"a": 0,"e": "Drama boneka: tokoh-tokohnya boneka yang digerakkan dan disuarakan dari balik layar."},{"lv": "C4","vis": "😄","q": "Pertunjukan komedi khas Jawa Timur yang pemainnya banyak melawak disebut…","o": ["ketoprak","wayang","ludruk","angklung"],"a": 2,"e": "Ludruk adalah pertunjukan rakyat Jawa Timur yang terkenal penuh humor dan lawakan."},{"lv": "C4","vis": "🏮","q": "Dalam pertunjukan wayang, orang yang memainkan semua boneka sekaligus menyuarakan setiap tokoh disebut…","o": ["dalang","sinden","niyaga","penata rias"],"a": 0,"e": "Dalang memimpin pertunjukan: menggerakkan wayang dan menjadi sumber suara semua tokoh."},{"lv": "C5","vis": "👏","q": "Setelah pertunjukan selesai, penonton memberi tepuk tangan sambil tersenyum. Hal itu menunjukkan…","o": ["penonton bosan","penonton menyukai pertunjukan","penonton tidak mengerti cerita","penonton ingin pulang"],"a": 1,"e": "Tepuk tangan dan senyum adalah bentuk apresiasi penonton atas pertunjukan yang disukai."},{"lv": "C5","vis": "🐱","q": "Cerita: \"Setiap pagi, Kucing Kota mengejar tikus di pasar. Suatu hari, tikus itu terjebak jerat, lalu Kucing Kota melepaskannya dan mereka menjadi teman.\"\nJudul yang PALING tepat adalah…","o": ["Kucing Kota dan Tikus yang Menjadi Teman","Pasar yang Ramai","Belajar Menangkap Ikan","Kucing Kota Sedang Tidur"],"a": 0,"e": "Judul terbaik merangkum isi cerita: kucing dan tikus yang akhirnya bersahabat."},{"lv": "C4","vis": "🌑","q": "Pemain berkata: \"Mengapa masih gelap? Ayo cepat berangkat!\" Latar waktu adegan itu kemungkinan…","o": ["tengah malam","menjelang pagi (subuh)","siang bolong","sore hari"],"a": 1,"e": "Langit masih gelap tetapi sudah waktunya berangkat = waktu menjelang pagi."},{"lv": "C5","vis": "👫","q": "Kelompokmu akan pentas besok. Tindakan yang menunjukkan kerja sama yang baik adalah…","o": ["Setiap anggota mengerjakan sendiri tanpa berdiskusi.","Satu orang mengatur, yang lain tidak diizinkan bicara.","Semua anggota berdiskusi, lalu tugas dibagi sesuai keahlian.","Semua anggota berebut jadi tokoh utama."],"a": 2,"e": "Kerja sama yang baik: musyawarah, pembagian tugas, dan kesempatan yang adil bagi semua anggota."},{"lv": "C6","vis": "☔","q": "Kalian ingin membuat efek suara hujan sederhana dari alat di sekitar. Cara yang paling tepat adalah…","o": ["Mengetuk meja sekali keras-keras.","Mengguncang wadah berisi beras atau pasir.","Meniup mikrofon sekali kuat.","Mematikan semua lampu panggung."],"a": 1,"e": "Butiran beras/pasir yang diguncang menyerupai bunyi butiran hujan — karya efek suara sederhana (C6)."},{"lv": "C4","vis": "💡","q": "Adegan sedang berlangsung pada malam hari. Penata cahaya paling tepat memberikan…","o": ["cahaya terang merata seperti siang","cahaya redup dengan sedikit lampu","lampu warna-warni berkedip terus menerus","mematikan semua cahaya sampai pemain tidak terlihat"],"a": 1,"e": "Cahaya redup menunjukkan suasana malam, tetapi tetap cukup agar penonton bisa melihat pemain."},{"lv": "C4","vis": "😠","q": "\"Dasar kamu! Kamu selalu mengambil mainanku!\" Kata-kata itu menunjukkan tokoh sedang…","o": ["senang","marah","sedih","kaget"],"a": 1,"e": "Kata 'dasar kamu' dan tuduhan 'selalu mengambil' menunjukkan kemarahan."},{"lv": "C5","vis": "🧠","q": "Mengapa pemain perlu menghafal dialog sebelum pentas?","o": ["Supaya pertunjukan berjalan lancar dan penonton nyaman.","Supaya panggung menjadi lebih besar.","Supaya pemain tidak perlu berlatih.","Supaya penonton membawa properti."],"a": 0,"e": "Dialog yang hafal membuat alur pertunjukan lancar tanpa terhenti atau lupa kata."},{"lv": "C5","vis": "🗯️","q": "Kalimat yang merupakan PENDAPAT tentang pertunjukan adalah…","o": ["Pertunjukan dimulai pukul 08.00.","Pemain memakai busana berwarna merah.","Pertunjukan itu paling seru deh.","Tirai panggung berwarna biru."],"a": 2,"e": "'Paling seru' adalah perasaan pribadi yang bisa berbeda antar penonton — itu pendapat, bukan fakta."},{"lv": "C5","vis": "🦺","q": "Pertunjukan menggunakan panggung bertingkat. Yang PALING aman dilakukan adalah…","o": ["Berlari-lari di tepi panggung.","Mendorong teman saat berpapasan.","Berjalan hati-hati dan tidak mendorong pemain lain.","Mengangkat properti berat seorang diri."],"a": 2,"e": "Keselamatan panggung: berjalan hati-hati, tidak mendorong, dan meminta bantuan untuk barang berat."},{"lv": "C4","vis": "🌟","q": "Dalam naskah, tokoh A muncul di hampir semua adegan dan masalah cerita berpusat padanya. Peran tokoh A adalah…","o": ["tokoh utama","figuran","penonton","pembantu panggung"],"a": 0,"e": "Tokoh yang selalu tampil dan menjadi pusat masalah cerita = tokoh utama."},{"lv": "C4","vis": "⏱️","q": "Pertunjukan A berdurasi 30 menit dengan 5 adegan. Pertunjukan B juga 30 menit dengan 10 adegan. Pernyataan yang BENAR adalah…","o": ["Setiap adegan A lebih panjang daripada adegan B.","Setiap adegan B lebih panjang daripada adegan A.","Kedua pertunjukan punya adegan sama panjang.","Pertunjukan A tidak punya adegan."],"a": 0,"e": "Waktu sama, adegan A lebih sedikit, maka rata-rata tiap adegan A lebih panjang."},{"lv": "C4","vis": "🗣️","q": "Seorang tokoh berdiri sendirian di panggung dan berkata: \"Aku rindu Ibu.\" Tidak ada lawan bicara. Cara berbicara seperti itu disebut…","o": ["dialog","monolog","diskusi","wawancara"],"a": 1,"e": "Monolog adalah tokoh yang berbicara sendiri tanpa lawan bicara di panggung."},{"lv": "C5","vis": "📝","q": "Naskah: \"A: Hai! B: Apa kabar? A: Baik. B: Ayo bermain!\" Apa kelemahan naskah itu?","o": ["Tidak ada tokoh.","Tidak ada masalah/cerita yang jelas.","Terlalu panjang.","Terlalu banyak lawan bicara."],"a": 1,"e": "Percakapan tanpa masalah membuat cerita datar — naskah yang baik perlu konflik agar menarik."},{"lv": "C6","vis": "🔄","q": "Cerita berakhir: \"Sari menangis karena kehilangan kucingnya.\" Agar cerita lebih menghibur, akhir yang PALING tepat adalah…","o": ["Kucing itu ditemukan tetangga dan Sari pulang bahagia.","Sari semakin sedih setiap hari.","Kucing itu tidak pernah kembali.","Sari pindah rumah dan lupa pada kucing."],"a": 0,"e": "Mengganti bagian akhir cerita menjadi bahagia = menyusun ulang karya (C6)."},{"lv": "C5","vis": "🎭","q": "Tokoh dalam adegan sedang kalah lomba dan harus menangis. Agar penonton percaya, permainan pemain harus…","o": ["tersenyum lebar","menunjukkan kesedihan dengan suara pelan dan wajah murung","berteriak-teriak","menari riang"],"a": 1,"e": "Ekspresi dan suara harus sesuai perasaan tokoh agar penonton percaya pada cerita."}];
+
+const LVNAME={C4:"🔍 Analisis (C4)",C5:"⭐ Evaluasi (C5)",C6:"🛠️ Kreasi (C6)"};
+const $=id=>document.getElementById(id);
+let i=0, ans=new Array(DATA.length).fill(-1);
+
+// Simpan skor: localStorage per perangkat (ponytail: tanpa backend — tambah server/API kalau guru perlu lihat skor semua siswa)
+const HKEY="teater_scores_v1";
+const getH=()=>{try{return JSON.parse(localStorage.getItem(HKEY))||[]}catch(e){return[]}};
+const setH=h=>{try{localStorage.setItem(HKEY,JSON.stringify(h))}catch(e){}};
+const medal=s=>s>=27?"🏆":s>=21?"⭐":s>=15?"👍":"💪";
+function renderHist(){
+  const h=getH();
+  $("histbox").classList.toggle("hide",!h.length);
+  $("hist").innerHTML=h.map(r=>
+    `<div class="hrow">${medal(r.s)} <b>${esc(r.n||"Anonim")}</b> — <b>${r.s}/30</b><span class="hdate">${r.d}</span></div>`).join("");
+}
+function pushScore(name,s){
+  const h=getH();
+  h.unshift({n:name||"Anonim",s:s,d:new Date().toLocaleDateString("id-ID",{day:"2-digit",month:"short",year:"numeric"})});
+  setH(h.slice(0,20)); renderHist();
+}
+
+$("go").onclick=()=>{
+  document.body.dataset.name=$("nm").value.trim();
+  $("start").classList.add("hide"); $("quiz").classList.remove("hide");
+  show();
+};
+function show(){
+  const d=DATA[i];
+  $("cnt").textContent=`Soal ${i+1} / ${DATA.length}`;
+  $("lv").textContent=LVNAME[d.lv];
+  $("fill").style.width=(i/DATA.length*100)+"%";
+  $("vis").textContent=d.vis;
+  $("qtext").textContent=d.q;
+  const sub=$("qsub");
+  // baris tabel/blok teks ikut di qtext (pakai \n), sub dipakai opsional
+  sub.classList.add("hide");
+  const box=$("opts"); box.innerHTML="";
+  d.o.forEach((t,k)=>{
+    const b=document.createElement("button");
+    b.className="opt"+(ans[i]===k?" sel":"");
+    b.innerHTML=`<span class="k">${"ABCD"[k]}.</span> ${esc(t)}`;
+    b.disabled=ans[i]>-1;
+    b.onclick=()=>{ans[i]=k;[...box.children].forEach((c,j)=>c.classList.toggle("sel",j===k));
+      box.querySelectorAll(".opt").forEach(c=>c.disabled=true);
+      $("next").disabled=false; $("fill").style.width=((i+1)/DATA.length*100)+"%";};
+    box.appendChild(b);
+  });
+  $("next").disabled=ans[i]===-1;
+  $("next").textContent = i===DATA.length-1 ? "🏁 Selesai & Lihat Nilai" : "Soal Berikutnya ➜";
+}
+$("next").onclick=()=>{ if(i<DATA.length-1){i++;show();} else finish(); };
+$("quit").onclick=finish;
+$("again").onclick=()=>{i=0;ans.fill(-1);$("res").classList.add("hide");
+  $("quiz").classList.remove("hide");show();};
+$("printBtn").onclick=()=>window.print();
+
+function finish(){
+  const sc=ans.reduce((n,v,k)=>n+(v===DATA[k].a?1:0),0);
+  const p=Math.round(sc/DATA.length*100);
+  $("quiz").classList.add("hide"); $("res").classList.remove("hide");
+  const nm=document.body.dataset.name;
+  $("who").textContent=nm?`🏅 Hasil untuk ${nm}`:"🏅 Hasil Belajarmu";
+  $("sc").textContent=sc; $("circ").style.setProperty("--p",p);
+  let bdg,msg;
+  if(p>=90){bdg="🏆 Juara Teater!";msg="Luar biasa! Kamu sangat paham seni teater dan berpikir kritis. Pertahankan!";}
+  else if(p>=75){bdg="⭐ Hebat!";msg="Kerja bagus! Hampir semua soal benar. Pelajari lagi soal yang salah ya.";}
+  else if(p>=60){bdg="👍 Bagus!";msg="Bagus! Terus berlatih memahami situasi pertunjukan, kamu pasti bisa lebih baik.";}
+  else{bdg="💪 Terus Berlatih!";msg="Jangan menyerah! Baca lagi pembahasan tiap soal, lalu coba sekali lagi.";}
+  $("bdg").textContent=bdg; $("msg").textContent=msg;
+  pushScore(nm,sc); $("saved").classList.remove("hide");
+  const rb=$("revbox"); rb.innerHTML="<h2 style='color:var(--primary)'>📖 Pembahasan</h2>";
+  DATA.forEach((d,k)=>{
+    const ok=ans[k]===d.a;
+    const you=ans[k]>-1?"ABCD"[ans[k]]+"> "+esc(d.o[ans[k]]):"Tidak dijawab";
+    rb.insertAdjacentHTML("beforeend",
+     `<div class="rev">
+        <span class="st ${ok?'good':'wrong'}">${ok?'✔ Benar':'✘ Salah'} · Soal ${k+1} · ${LVNAME[d.lv]}</span>
+        <div class="qq">${esc(d.q)}</div>
+        <div class="ans">Jawabanmu: ${you}<br>Jawaban benar: <b>${"ABCD"[d.a]}. ${esc(d.o[d.a])}</b></div>
+        <div class="exp">💡 ${esc(d.e)}</div>
+      </div>`);
+  });
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+$("clearHist").onclick=()=>{setH([]);renderHist();};
+renderHist();
+</script>
+</body>
+</html>
